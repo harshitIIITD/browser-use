@@ -13,7 +13,7 @@ from rich.text import Text
 
 # Local module imports
 from browser_use import Agent
-
+                                                                                                                                                   
 load_dotenv()
 
 
@@ -67,8 +67,8 @@ async def run_browser_task(
 			llm=ChatOpenAI(model='gpt-4o'),
 		)
 		result = await agent.run()
-		#  TODO: The result cloud be parsed better
-		return result
+		#  TODO: The result could be parsed better
+		return str(result)
 	except Exception as e:
 		return f'Error: {str(e)}'
 
